@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Heart Disease Prediction</title>
+</head>
+
+<body style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <center>
+    <h2 class="p-3">Heart Disease Prediction</h2>
+  </center>
+  <div class="container">
+  <form method="POST" action="{{url_for('predict')}}">
+    <b>Enter your age : <input type="text" name="a" placeholder="Your age"><br><br>
+      Enter your gender : <input type="text" name="b" placeholder="1 for Male & 0 for Female"><br><br>
+      Chest pain(value 0-3): <input type="text" name="c" placeholder="Enter value"><br><br>
+      Resting Blood Pressure : <input type="text" name="d" placeholder="Blood Pressure"><br><br>
+      Cholestrol : <input type="text" name="e" placeholder="in mg/dl"><br><br>
+      Fasting blood sugar : <input type="text" name="f" placeholder="> 120 mg/dl"><br><br>
+      Resting electrocardiographic results : <input type="text" name="g" placeholder="values 0,1,2"><br><br>
+      Maximum heart rate achieved : <input type="text" name="h" placeholder="Max heart rate"><br><br>
+      Exercise induced angina : <input type="text" name="i" placeholder="Enter value"><br><br>
+      ST depression induced by exercise relative to rest : <input type="text" name="j"
+        placeholder="values 0,1,2"><br><br>
+      The slope of the peak exercise ST segment : <input type="text" name="k" placeholder="Enter values"><br><br>
+      Number of major vessels colored by flourosopy : <input type="text" name="l" placeholder="values (0-3)"><br><br>
+      Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect : <input type="text" name="m"
+        placeholder="Enter values (0-2)"><br><br>
+    </b>
+    <input class="btn btn-outline-primary m-2" type="submit" value="predict">
+  </form>
+</div>
+  <footer style="background-color: #0d6efd;">
+    <div class="text-center p-3">
+      <p>© 2024 Copyright <a class="text-white" href="#">Karishma Wadhwani</a></p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
